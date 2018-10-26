@@ -167,6 +167,7 @@ button:focus {
 
 .item > .stext h1 {
 	font-size: 1.7em;
+	font-weight: bold;
 	width: 250px;
 	margin: 0 auto;
 }
@@ -229,6 +230,7 @@ button:focus {
 
 .subsec h1 {
 	font-size: 1.7em;
+	font-weight: bold;
 	text-align: center;
 }
 
@@ -399,6 +401,7 @@ button:focus {
 #testimonios h1 {
 	text-align: center;
 	font-size: 1.5em;
+	font-weight: bold;
 	margin-bottom: 1.5em;
 	padding-top: 2.5em;
 }
@@ -472,6 +475,7 @@ button:focus {
 #contactame h1 {
 	color: var(--emphasis);
 	font-size: 1.5em;
+	font-weight: bold;
 	text-align: center;
 	margin-bottom: 15px;
 }
@@ -730,6 +734,7 @@ button:focus {
 
 	#dudas .sec-header h1 {
 		font-size: 1.9em;
+		font-weight: bold;
 	}
 
 	#dudas .sec-header p{
@@ -973,6 +978,7 @@ button:focus {
 
 	.p-info h2 {
 		font-size: 2em;
+		font-weight: bold;
 		max-width: 120px;
 	}
 
