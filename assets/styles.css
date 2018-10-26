@@ -184,10 +184,14 @@ button:focus {
 .services {
     margin-right: 0;
     margin-left: 0;
+    background-color: var(--dark);
 }
 
 .services .subsec {
 	padding: 60px 40px;
+	background-color: #FFF;
+	transition: all .4s;
+	z-index: 100;
 }
 
 .services > .subsec:nth-child(1) {
@@ -199,12 +203,28 @@ button:focus {
 	width: 100%;
 	color: #FFF;
 	background-color: var(--gray);
+	cursor: pointer;
+}
+
+.services > .subsec:nth-child(2):hover {
+	transform: scale(1.05);
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+	z-index: 200;
 }
 
 .services > .subsec:nth-child(3) {
 	width: 100%;
 	color: #FFF;
 	background-color: var(--dark);
+	cursor: pointer;
+}
+
+.services > .subsec:nth-child(3):hover {
+	transform: scale(1.05);
+	-webkit-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+	z-index: 200;
 }
 
 .subsec h1 {
@@ -277,6 +297,16 @@ button:focus {
 
 #dudas .text-cont {
 	text-align: justify;
+}
+
+#dudas .text-cont p {
+	cursor: pointer;
+	transition: all .4s;
+}
+
+#dudas .text-cont p:hover {
+	transform: scale(1.05);
+	text-shadow: 2px 2px 2px rgba(0,0,0,.6);
 }
 
 #dudas .sec-header {
@@ -675,7 +705,7 @@ button:focus {
 
 	.subsec h1:after {
 		width: 50px;
-		margin: 0 auto;
+		margin: 0;
 		margin-top: 25px;
 	}
 

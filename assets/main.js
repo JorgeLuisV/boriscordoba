@@ -18,24 +18,38 @@ class Main{
 		this.sliderController()
 		this.testimonials()
 		this.navLinks()
+		this.bodylinks()
 		var wow = new WOW({
 		    mobile: false
 		})
 		wow.init()
 	}
 
+	bodylinks() {
+		$('[class*="bak-"]').on('click', () => {
+			this.goto('#contactame')
+		})
+
+		$('.text-cont > p').on('click', () => {
+			this.goto('#contactame')
+		})
+	}
+
+	goto(location) {
+		console.log(location)
+		if(location !== null && location !== ''){
+	    	$('html, body').animate({
+	      		scrollTop: $(location).offset().top
+	    	}, 900)
+	  	}
+	}
+
 	navLinks() {
-		$('.navbar-nav a').click(function(e){
+		$('.navbar-nav a').click((e) => {
 			e.preventDefault()
-			var href = $(this).attr('href')
-		  	if(href){
-		    	$('html, body').animate({
-		      		scrollTop: $(href).offset().top
-		    	}, 900)
-		    	closeMenu()
-		  	} else {
-		    	window.location.href = './admin/login.php'
-		  	}
+
+			let href = $(e.currentTarget).attr('href')
+			this.goto(href)
 		})
 	}
 
