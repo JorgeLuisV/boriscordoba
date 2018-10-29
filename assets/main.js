@@ -118,18 +118,13 @@ class Main{
 		$('#contactForm').submit((e) => {
 			e.preventDefault()
 
-			let formFooter = $('#contactForm .form-footer')
-
-			formFooter.find('[type="submit"]').css('display', 'none')
-			formFooter.append('')
-
-			// let form = `#${$(e.currentTarget).attr('id')}`
-			// if(this.validateInputs(form)){
-		 //        grecaptcha.execute()
-		 //    }else{
-		 //        var $invalid_fieldset = $(form).find('.input:invalid')
-		 //        $($invalid_fieldset).focus()
-		 //    }
+			let form = `#${$(e.currentTarget).attr('id')}`
+			if(this.validateInputs(form)){
+		        grecaptcha.execute()
+		    }else{
+		        var $invalid_fieldset = $(form).find('.input:invalid')
+		        $($invalid_fieldset).focus()
+		    }
 		})
 	}
 }
@@ -139,9 +134,22 @@ function sendEmail() {
 
 	if(gresponse.length === 0) return console.log('No gresponse')
 
-	let form = $('#contactForm')
+	let form   = $('#contactForm'),
+		footer = form.find('.form-footer')
 
-	form.find('[type="submit"]').addClass('fadeOutDown')
+	footer.find('[type="submit"]').removeClass('flipInY').html('Enviando...').prop('disabled', true)
+
+	setTimeout(function(){
+		footer.find('[type="submit"]').hide()
+		footer.append('<p class="send-success fadeInUp animated"><i class="fas fa-check-circle"></i> ¡Su mensaje ha sido enviado!</p>')
+
+		setTimeout(function(){
+			form[0].reset()
+          	grecaptcha.reset()
+			footer.find('.send-success').remove()
+			footer.find('[type="submit"]').html('Enviar').addClass('flipInY').prop('disabled', false).show()
+		}, 3000)
+	}, 3000)
 }
 
 $(document).ready(function($) {

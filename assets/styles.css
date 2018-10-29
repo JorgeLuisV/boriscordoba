@@ -491,10 +491,12 @@ button:focus {
 }
 
 .form-footer {
+	margin-top: 2em;
 	text-align: center;
 }
 
 .form-footer [type="submit"] {
+	margin-top: 0;
 	font-size: 1.2em;
 	width: 150px;
 }
@@ -640,6 +642,20 @@ button:focus {
 
 .g-recaptcha {
 	display: none;
+}
+
+.send-success{
+	font-size: 1.1em;
+	text-align: center;
+	font-weight: bold;
+	color: #00C485;
+}
+
+.send-error {
+	font-size: 1.1em;
+	text-align: center;
+	font-weight: bold;
+	color: #e51e2f;
 }
 
 /* Responsive */
