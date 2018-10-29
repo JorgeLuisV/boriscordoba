@@ -185,7 +185,7 @@ button:focus {
 .services {
     margin-right: 0;
     margin-left: 0;
-    background-color: var(--dark);
+    background-color: transparent;
 }
 
 .services .subsec {
@@ -638,6 +638,10 @@ button:focus {
 	transform: scale(1.4);
 }
 
+.g-recaptcha {
+	display: none;
+}
+
 /* Responsive */
 
 @media (min-width: 768px) {
@@ -677,6 +681,10 @@ button:focus {
 
 	/* Services */
 
+	.services {
+	    background-color: var(--dark);
+	}
+
 	.services .subsec {
 	    margin-right: 0;
     	margin-left: 0;
@@ -710,7 +718,7 @@ button:focus {
 
 	.subsec h1:after {
 		width: 50px;
-		margin: 0;
+		margin: 0 auto;
 		margin-top: 25px;
 	}
 
@@ -723,6 +731,12 @@ button:focus {
 		font-size: 1.05em;
 	}
 
+	/* About */
+
+	.p-info {
+	    padding: 60px 60px;
+	}
+
 	/* Questions */
 
 	.mb-sec {
@@ -730,7 +744,11 @@ button:focus {
 	}
 
 	#dudas .container {
-	    padding: 60px 110px;
+	    padding: 60px 30px;
+	}
+
+	#dudas .q-title {
+		margin: 0 auto;
 	}
 
 	#dudas .sec-header h1 {
@@ -787,14 +805,13 @@ button:focus {
 	}
 
 	#testimonios h1 {
-		text-align: left;
+		text-align: center;
 		font-size: 2em;
-		width: 170px;
 		padding-top: 3em;
 	}
 
 	#testimonios h1:after {
-	    margin: 0;
+	    margin: 0 auto;
 	    margin-top: 25px;
 	}
 
@@ -825,7 +842,7 @@ button:focus {
 
 	/* Contact */
 	#contactame .container {
-		padding: 90px 40px;
+		padding: 90px 60px;
 	}
 
 	#contactame h1 {
@@ -849,6 +866,11 @@ button:focus {
 	}
 
 	/* footer */
+	.footer .container {
+	    max-width: 900px;
+	    padding: 0 75px;
+	}
+
 	.footer .f-info {
 		text-align: left;
 		padding: 30px 0;
@@ -917,6 +939,12 @@ button:focus {
 		text-align: left;
 	}
 
+	.subsec h1:after {
+		width: 50px;
+		margin: 0;
+		margin-top: 25px;
+	}
+
 	.services > .subsec:nth-child(1) {
 	    display: flex;
 	    align-items: center;
@@ -933,10 +961,18 @@ button:focus {
 	}
 
 	/* Questions */
+
+	#dudas .container {
+	    padding: 60px 120px;
+	}
 	
 	#dudas .text-cont {
 		max-width: 78%;
 		font-size: 1.15em;
+	}
+
+	#dudas .q-title {
+		margin: 0;
 	}
 
 	.pl-sec {
@@ -978,6 +1014,7 @@ button:focus {
 	}
 
 	.p-info h2 {
+		font-size: 2em;
 		max-width: 120px;
 	}
 
@@ -999,6 +1036,32 @@ button:focus {
 	.p-image img{
 		width: auto;
 		height: 725px;
+	}
+
+	/* Testimonials */
+	#testimonios .t-cont{
+		margin: 0 auto;
+	}
+
+	#testimonios h1 {
+		text-align: left;
+		width: 170px;
+	}
+
+	#testimonios h1:after {
+	    margin: 0;
+	    margin-top: 25px;
+	}
+
+	/* Contant */
+	#contactame .container {
+		padding: 90px 5px;
+	}
+
+	/* Footer */
+	.footer .container {
+	    max-width: 900px;
+	    padding: 20px;
 	}
 }
 

@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="assets/owl-carousel/owl.theme.default.min.css">
   <link rel="stylesheet" href="assets/animate.css">
   <link rel="stylesheet" href="assets/styles.css" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
   <nav id="menu" class="navbar fixed-top navbar-expand-lg navbar-light">
@@ -100,7 +101,7 @@
     <div class="container">
       <div class="sec-header">
         <img src="assets/images/question.svg" alt="question icon">
-        <div>
+        <div class="q-title">
           <h1>¿DESEAS RESOLVER ALGUNA DUDA?</h1>
           <p>Pregúntame lo que quieras sin compromiso y sin costo alguno.</p>
         </div>
@@ -183,25 +184,26 @@
     <div class="container">
       <h1>CONTACTO</h1>
       <p class="subtitle">Envíanos un mensaje</p>
-      <form id="contactForm" autocomplete="off" class="wow flipInY animated" data-wow-duration="1.2s" data-wow-delay=".2s">
+      <form id="contactForm" class="wow flipInY animated" data-wow-duration="1.2s" data-wow-delay=".2s" autocomplete="off">
         <div class="row">
           <div class="col-md-6 col-sm-12">
             <div class="form-group">
-              <input type="email" class="form-control" id="names" name="names" placeholder="Nombres">
+              <input type="text" class="form-control" id="names" name="names" placeholder="Nombres" required>
             </div>
           </div>
           <div class="col-md-6 col-sm-12">
             <div class="form-group">
-              <input type="email" class="form-control" id="email" name="email" placeholder="Correo">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Correo" required>
             </div>
           </div>
           <div class="col-md-12">
             <div class="form-group">
-              <textarea class="form-control" id="message" placeholder="Mensaje" rows="3"></textarea>
+              <textarea class="form-control" id="message" placeholder="Mensaje" rows="3" required></textarea>
             </div>
           </div>
+          <div id='recaptcha' class="g-recaptcha" data-sitekey="6LfFSHcUAAAAAON5TdaMNrCxMKZWTASE_G5E2oMi" data-callback="sendEmail" data-size="invisible"></div>
           <div class="col-sm-12 form-footer">
-            <button type="submit" class="btn btn-color baction">Enviar</button>
+            <button type="submit" class="btn btn-color baction animated">Enviar</button>
           </div>
         </div>
       </form>

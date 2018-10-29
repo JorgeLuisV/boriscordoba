@@ -17,8 +17,10 @@ class Main{
 		this.initNavControls()
 		this.sliderController()
 		this.testimonials()
+		this.inputControls()
 		this.navLinks()
 		this.bodylinks()
+		this.formSubmit()
 		var wow = new WOW({
 		    mobile: false
 		})
@@ -107,6 +109,39 @@ class Main{
 			$(this).parent('.form-group').removeClass('focused')
 		})
 	}
+
+	validateInputs(inputs_form){
+	    return document.querySelector(inputs_form).checkValidity()
+	}
+
+	formSubmit() {
+		$('#contactForm').submit((e) => {
+			e.preventDefault()
+
+			let formFooter = $('#contactForm .form-footer')
+
+			formFooter.find('[type="submit"]').css('display', 'none')
+			formFooter.append('')
+
+			// let form = `#${$(e.currentTarget).attr('id')}`
+			// if(this.validateInputs(form)){
+		 //        grecaptcha.execute()
+		 //    }else{
+		 //        var $invalid_fieldset = $(form).find('.input:invalid')
+		 //        $($invalid_fieldset).focus()
+		 //    }
+		})
+	}
+}
+
+function sendEmail() {
+	let gresponse = grecaptcha.getResponse()
+
+	if(gresponse.length === 0) return console.log('No gresponse')
+
+	let form = $('#contactForm')
+
+	form.find('[type="submit"]').addClass('fadeOutDown')
 }
 
 $(document).ready(function($) {
