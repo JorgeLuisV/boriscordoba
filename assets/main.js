@@ -67,6 +67,11 @@ class Main{
 				selector.addClass('open')
 			}
 		})
+
+		$('.navbar-nav > li > a').on('click', () =>{
+		    $('.navbar-collapse').collapse('hide')
+		    $('.nav-ibtn').removeClass('open')
+		})
 	}
 
 	sliderController() {
