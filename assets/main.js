@@ -128,9 +128,9 @@ class Main{
 				setTimeout(function(){
 					footer.find('[type="submit"]').hide()
 					footer.append('<p class="send-success fadeInUp animated"><i class="fas fa-check-circle"></i> ¡Su mensaje ha sido enviado!</p>')
+					form[0].reset()
 
 					setTimeout(function(){
-						form[0].reset()
 						footer.find('.send-success').remove()
 						footer.find('[type="submit"]').html('Enviar').addClass('flipInY').prop('disabled', false).show()
 					}, 3000)
